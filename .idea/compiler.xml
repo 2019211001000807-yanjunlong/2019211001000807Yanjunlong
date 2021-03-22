@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="2019211001000807yanjunlong" target="1.8" />
+      <module name="software test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

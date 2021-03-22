@@ -5,14 +5,21 @@
          version="4.0">
     <!--add code about ner servlet-->
     <servlet>
-        <servlet-name>anyName</servlet-name><!-- give any name-->
-        <servlet-class>yanjunlong.week2.HalloWorldServlet</servlet-class><!--name of servlet class -->
+        <servlet-name>LifeCycleServlet</servlet-name>
+        <servlet-class>com.yanjunlong.week3.demo.LifeCycleServlet</servlet-class>
+    </servlet>
+    <!--automatic code-->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.yanjunlong.week3.demo.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>anyName</servlet-name>
-        <url-pattern>/hello</url-pattern><!-- url must start with / -->
+        <servlet-name>LifeCycleServlet</servlet-name>
+        <url-pattern>/Life</url-pattern>
+        <!--/Life ==LifeCycleServlet== com.yanjunlong.week3.demo.LifeCycleServlet-->
     </servlet-mapping>
-    <!-- x= 5, x= a so we can say a=5
-    so /hello=yanjunlong.week2.HalloWorldServlet
-    -->
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern><!--writer this url in action -->
+    </servlet-mapping>
 </web-app>
