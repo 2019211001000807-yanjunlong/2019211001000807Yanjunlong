@@ -22,4 +22,5 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern><!--writer this url in action -->
     </servlet-mapping>
+
 </web-app>

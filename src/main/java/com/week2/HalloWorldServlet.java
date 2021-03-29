@@ -1,4 +1,4 @@
-package yanjunlong.week2;
+package com.week2;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
