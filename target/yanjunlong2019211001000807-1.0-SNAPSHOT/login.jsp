@@ -7,7 +7,12 @@
 --%>
 <%@include file="header.jsp"%>
 <h1>Login</h1>
-<form method="post"  action="/register">
+<%
+    if (request.getAttribute("message")==null){
+        out.println(request.getAttribute("message"));
+    }
+%>
+<form method="post"  action="/login">
 Username:<input type="text" name="username"><br/>
 Password:<input type="password" name="password" required minlength="8"><br/>
 <input type="submit" value="Login"/>

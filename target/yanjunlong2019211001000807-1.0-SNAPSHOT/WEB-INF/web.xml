@@ -4,27 +4,42 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <!--add code about ner servlet-->
-    <servlet>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>com.yanjunlong.week3.demo.LifeCycleServlet</servlet-class>
-    </servlet>
-    <!--automatic code-->
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.yanjunlong.week3.demo.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.yanjunlong.week5.demo.LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>/Life</url-pattern>
-        <!--/Life ==LifeCycleServlet== com.yanjunlong.week3.demo.LifeCycleServlet-->
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern><!--writer this url in action -->
-    </servlet-mapping>
-
+<!--    <servlet>-->
+<!--        <servlet-name>LifeCycleServlet</servlet-name>-->
+<!--        <servlet-class>com.yanjunlong.week3.demo.LifeCycleServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    &lt;!&ndash;automatic code&ndash;&gt;-->
+<!--    <servlet>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <servlet-class>com.yanjunlong.week3.demo.RegisterServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet>-->
+<!--        <servlet-name>LoginServlet</servlet-name>-->
+<!--        <servlet-class>com.yanjunlong.week5.demo.LoginServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>LifeCycleServlet</servlet-name>-->
+<!--        <url-pattern>/Life</url-pattern>-->
+<!--        &lt;!&ndash;/Life ==LifeCycleServlet== com.yanjunlong.week3.demo.LifeCycleServlet&ndash;&gt;-->
+<!--    </servlet-mapping>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <url-pattern>/register</url-pattern>&lt;!&ndash;writer this url in action &ndash;&gt;-->
+<!--    </servlet-mapping>-->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost;databaseName=userdb;</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>yjl181314</param-value>
+    </context-param>
 </web-app>
