@@ -64,7 +64,7 @@ public class RegisterServlet extends HttpServlet {
                 out.println("<td>"+rs.getString("username")+"</td>");
                 out.println("<td>"+rs.getString("password")+"</td>");
                 out.println("<td>"+rs.getString("email")+"</td>");
-                out.println("<td>"+rs.getString("sex")+"</td>");
+                out.println("<td>"+rs.getString("gender")+"</td>");
                 out.println("<td>"+rs.getString("date")+"</td>");
 
                 out.println("</tr>");

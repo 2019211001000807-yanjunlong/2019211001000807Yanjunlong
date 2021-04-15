@@ -19,7 +19,7 @@ import static java.lang.Class.forName;
                 @WebInitParam(name="driver",value ="com.microsoft.sqlserver.jdbc.SQLServerDriver"),
                 @WebInitParam(name="url",value ="jdbc:sqlserver://localhost;databaseName=userbd"),
                 @WebInitParam(name="username",value ="sa"),
-                @WebInitParam(name="password",value ="admin123456789"),
+                @WebInitParam(name="password",value ="yjl181314"),
         },loadOnStartup = 1
 )//end of webservlet
 public class JDBCDemoServlet extends HttpServlet {
@@ -30,7 +30,7 @@ public class JDBCDemoServlet extends HttpServlet {
         //String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
         //String url="jdbc:sqlserver://localhost;databaseName=userbd;";
         //String username="sa";
-        //String password="admin123456789";
+        //String password="yjl181314";
         //code like this is bad way --- because change in no easy
         //for example change password of db - change in java code
 

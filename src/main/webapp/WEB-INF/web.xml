@@ -26,6 +26,10 @@
 <!--        <servlet-name>RegisterServlet</servlet-name>-->
 <!--        <url-pattern>/register</url-pattern>&lt;!&ndash;writer this url in action &ndash;&gt;-->
 <!--    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>fstServlet</servlet-name>
+        <servlet-class>com.week2.fstServlet</servlet-class>
+    </servlet>
     <context-param>
         <param-name>driver</param-name>
         <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
@@ -42,4 +46,11 @@
         <param-name>password</param-name>
         <param-value>yjl181314</param-value>
     </context-param>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>fstServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -5,11 +5,7 @@
   Time: 21:26
   To change this template use File | Settings | File Templates.
 --%>
-<%@include file="header.jsp"%>
-<form method="post">
-    This is my JSP page<br/>
-    Name:<input type="text" name="name"><br/>
-    ID:<input type="text" name="ID"><br/>
-    <input type="submit" value="Send data to server"/>
-</form>
-<%@include file="footer.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="WEB-INF/views/header.jsp"%>
+tested jsp
+<%@include file="WEB-INF/views/footer.jsp"%>

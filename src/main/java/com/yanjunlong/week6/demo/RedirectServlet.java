@@ -10,28 +10,19 @@ public class RedirectServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //redirect - same server - Relative
-        //1. start without /
-        System.out.println("before redirect");
+        String sel=request.getParameter("search");
+        String sea=request.getParameter("txt");
+        System.out.println(sel);
+        if(sel.equals("baidu")) {
+            response.sendRedirect("https://www.baidu.com/s?wd="+sea);
+        }
+        if(sel.equals("bing")) {
+            response.sendRedirect("https://cn.bing.com/search?q="+sea);
+        }
+        if(sel.equals("google")) {
+            response.sendRedirect("https://www.google.com/search?q="+sea);
+        }
 
-        //response.sendRedirect("index.jsp");//url--change to index.jsp
-        //http://localhost:8080/2019211001000807yanjunlong_war/redirect
-        //http://localhost:8080/2019211001000807yanjunlong_war/index.jsp
-        //see the url - only last part of url changed ( redirect --> index.jsp)
-
-        System.out.println("after redirect");
-        //2. start with /
-        //response.sendRedirect("/2019211001000807yanjunlong_war/index.jsp");//-???
-        //why ? - look at url
-        //http://localhost:8080/2019211001000807yanjunlong_war/redirect
-        //http://localhost:8080/index.jsp
-        //redirect - another server - Absolute URL
-        //url change after 8080 - means tomcat
-        //add 2019211001000807yanjunlong_war/
-
-        //redirect - another server - Absolute URL
-        response.sendRedirect("https://www.baidu.com/");
-        //https://www.baidu.com/
     }
 
     @Override

@@ -18,7 +18,7 @@
     </tr><tr>
         <td>sex:</td><td><%=request.getAttribute("sex")%></td>
     </tr><tr>
-        <td>data:</td><td><%=request.getAttribute("data")%></td>
+        <td>data:</td><td><%=request.getAttribute("date")%></td>
     </tr>
 
 </table>

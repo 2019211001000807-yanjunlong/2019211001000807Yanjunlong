@@ -1,5 +1,8 @@
 package com.yanjunlong.week5.demo;
 
+import com.yanjunlong.dao.Userdao;
+import com.yanjunlong.model.User;
+
 import javax.print.attribute.standard.JobOriginatingUserName;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -16,18 +19,41 @@ public class LoginServlet extends HttpServlet {
     @Override
     public void init() throws ServletException{
         super.init();
-        con = (Connection) getServletContext().getAttribute("con");
+//        try {
+//            Class.forName(getServletConfig().getServletContext().getInitParameter("driver"));
+//            dbConn= DriverManager.getConnection(getServletConfig().getServletContext().getInitParameter("url"),getServletConfig().getServletContext().getInitParameter("Username"),getServletConfig().getServletContext().getInitParameter("Password"));
+//            System.out.println(dbConn);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        con=(Connection)getServletContext().getAttribute("con");
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //request.getRequestDispatcher("WEB-IFN/views/login.jsp").forward(request,response);
+        request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
-        String Username=request.getParameter("Username");
-        String Password=request.getParameter("Password");
-        String sql="select id,username,password,email,sex,data form usertable";
+        String Username=request.getParameter("username");
+        String Password=request.getParameter("password");
+
+        Userdao userdao=new Userdao();
+        try {
+            User user =userdao.findByUsernamePassword(con,Username,Password);
+            if (user!=null){
+                request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
+            }else {
+                request.setAttribute("massage","username or password Error!!!");
+                request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        /*String sql="select id,username,password,email,sex,Birthdate form usertable where username='"+username+"'and password='"+password+"'";
         try{
             ResultSet rs=con.createStatement().executeQuery(sql);
             if(rs.next()){
@@ -37,20 +63,23 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("password",rs.getString("password"));
                 request.setAttribute("email",rs.getString("email"));
                 request.setAttribute("sex",rs.getString("sex"));
-                request.setAttribute("data",rs.getString("data"));
+                request.setAttribute("date",rs.getString("date"));
 
                 request.getRequestDispatcher("userInfo,jsp").forward(request,response);
 
 
             }else{
                 request.setAttribute("massage","username or password Error!!!");
-                request.getRequestDispatcher("Login.jsp").forward(request,response);
+                request.getRequestDispatcher("login.jsp").forward(request,response);
 
 
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+
+         */
         writer.println("<br>Username :"+Username);
         writer.println("<br>Password :"+Password);
 
