@@ -9,19 +9,25 @@
 <%@include file="header.jsp"%>
 <h1> User Info</h1>
 <%
-   User user= (User) request.getAttribute("user");
+    Cookie [] allCookies=request.getCookies();
+    for (Cookie c:allCookies){
+        out.println("<br/>"+c.getName()+" --- "+c.getValue());
+    }
+%>
+<%
+    User u = (User) request.getAttribute("user");
 %>
 <table>
     <tr>
-        <td>Username:</td><td><%=user.getUsername()%></td>
+        <td>Username:</td><td><%=u.getUsername()%></td>
     </tr><tr>
-        <td>password:</td><td><%=user.getPassword()%></td>
+        <td>password:</td><td><%=u.getPassword()%></td>
     </tr><tr>
-        <td>email:</td><td><%=user.getEmail()%></td>
+        <td>email:</td><td><%=u.getEmail()%></td>
     </tr><tr>
-        <td>sex:</td><td><%=user.getsex()%></td>
+        <td>sex:</td><td><%=u.getsex()%></td>
     </tr><tr>
-        <td>data:</td><td><%=user.getBirthdate()%></td>
+        <td>data:</td><td><%=u.getBirthdate()%></td>
     </tr>
 
 </table>
