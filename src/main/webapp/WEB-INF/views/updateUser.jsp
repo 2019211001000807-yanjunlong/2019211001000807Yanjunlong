@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.yanjunlong.model.User" %><%--
   Created by IntelliJ IDEA.
   User: ALIENWARE
   Date: 2021/4/24

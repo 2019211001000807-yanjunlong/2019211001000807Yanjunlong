@@ -67,7 +67,7 @@
 <body>
 <form method="post"  action="/register">
         <h1>This is my JSP page.</h1><br/>
-        <form action="../register" method="post" onsubmit="checkAll()">
+        <form action="/register" method="post" onsubmit="checkAll()">
         Username:<input type="text" name="username"><br/>
         Password:<input type="password" name="password" required minlength="8"><br/>
         email:<input type="email" name="email"><br/>
