@@ -1,9 +1,12 @@
+com\yanjunlong\controller\CartServlet.class
 com\yanjunlong\dao\IProductDao.class
 com\yanjunlong\controller\AdminHomeServlet.class
+com\yanjunlong\model\Item.class
 com\yanjunlong\filter\AdminAuthenticationFilter.class
 com\yanjunlong\dao\ProductDao.class
 com\yanjunlong\controller\ProductListServlet.class
 com\yanjunlong\filter\FrontEndAuthenticationFilter.class
+com\yanjunlong\controller\UserListServlet.class
 com\yanjunlong\controller\GetimgServlet.class
 com\yanjunlong\controller\ProductDetailServlet.class
 com\yanjunlong\controller\ShopServlet.class
