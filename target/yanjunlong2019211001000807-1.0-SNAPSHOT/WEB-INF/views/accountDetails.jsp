@@ -17,8 +17,8 @@
 							<li>Username :<span><%=u.getUsername()%></span></li>
 							<li>Password :<span><%=u.getPassword()%></span></li>
 							<li>Email :<span><%=u.getEmail()%></span></li>
-							<li>Gender :<span><%=u.getGender()%></span></li>
-							<li>Birthdate :<span><%=u.getBirthDate()%></span></li>
+							<li>Gender :<span><%=u.getsex()%></span></li>
+							<li>Birthdate :<span><%=u.getBirthdate()%></span></li>
 						</ul>
    						<a class="btn btn-default update" href="updateUser?id=<%=u.getId()%>">Update</a>
 					<%}%>
@@ -72,10 +72,10 @@
 						</td>
 						<td class="cart_total">
 						<%
-							com.dabing.model.Order o=(com.dabing.model.Order)pageContext.findAttribute("o");
+							com.yanjunlong.model.Order o=(com.yanjunlong.model.Order)pageContext.findAttribute("o");
 							int n=o.getPaymentId();
 							java.sql.Connection con=(java.sql.Connection)application.getAttribute("con");
-							String paymentType=com.dabing.model.Payment.findByPaymentId(con,n);
+							String paymentType=com.yanjunlong.model.Payment.findByPaymentId(con,n);
 							 %>
 								<p class="cart_total_price"><%=paymentType %></p>
 							</td>
@@ -105,7 +105,7 @@
 		
 			
 		</div>
-	</section> <!--/#cart_items-->
+<%--	</section> <!--/#cart_items-->--%>
 	
 <div id="popup_box">    <!-- OUR PopupBox DIV-->
   
