@@ -4,6 +4,7 @@ com\yanjunlong\dao\IProductDao.class
 com\yanjunlong\dao\IOrderDao.class
 com\yanjunlong\controller\LabServlet.class
 com\yanjunlong\dao\Userdao.class
+com\lab2\YourNameFilter.class
 com\lab1\Dog.class
 com\example\yanjunlong2019211001000807\HelloServlet.class
 com\yanjunlong\controller\AdminHomeServlet.class
@@ -12,6 +13,7 @@ com\yanjunlong\model\Item.class
 com\yanjunlong\controller\LogoutServlet.class
 com\yanjunlong\filter\AdminAuthenticationFilter.class
 com\lab1\Person.class
+com\lab2\LoginFilter.class
 com\week2\fstServlet.class
 com\yanjunlong\dao\ProductDao.class
 com\yanjunlong\model\Order.class
@@ -19,6 +21,7 @@ com\yanjunlong\controller\ProductListServlet.class
 com\yanjunlong\week5\demo\LoginServlet.class
 com\yanjunlong\filter\FrontEndAuthenticationFilter.class
 com\yanjunlong\controller\OrderDetailsServlet.class
+com\lab2\Login.class
 com\yanjunlong\controller\HomeServlet.class
 com\yanjunlong\controller\UserListServlet.class
 com\yanjunlong\controller\GetimgServlet.class
