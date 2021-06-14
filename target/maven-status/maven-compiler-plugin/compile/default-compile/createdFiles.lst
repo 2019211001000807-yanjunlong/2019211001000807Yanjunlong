@@ -5,6 +5,7 @@ com\yanjunlong\dao\IOrderDao.class
 com\yanjunlong\controller\LabServlet.class
 com\yanjunlong\dao\Userdao.class
 com\lab2\YourNameFilter.class
+com\yanjunlong\controller\ContactUsServlet.class
 com\lab1\Dog.class
 com\example\yanjunlong2019211001000807\HelloServlet.class
 com\yanjunlong\controller\AdminHomeServlet.class
@@ -30,6 +31,7 @@ com\yanjunlong\model\User.class
 com\yanjunlong\week6\demo\RedirectServlet.class
 com\yanjunlong\controller\ShopServlet.class
 com\yanjunlong\dao\OrderDao.class
+com\yanjunlong\controller\AdminOrderListServlet.class
 com\yanjunlong\week3\demo\RegisterServlet.class
 com\yanjunlong\controller\OrderServlet.class
 com\yanjunlong\controller\AddProductServlet.class
